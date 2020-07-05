@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   namespace :api do
-  get "one_contact" => "contacts#first_contact"
+  get '/contacts' => 'contacts#index'
+  get '/contacts/:id' => 'contacts#show'
   end
 end

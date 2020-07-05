@@ -1,3 +1,0 @@
-{
- display_contact: @first_contact.first_name
-}
