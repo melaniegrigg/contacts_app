@@ -23,10 +23,10 @@ class Api::ContactsController < ApplicationController
   def update
     @contact = Contact.find_by(id: params[:id])
     @contact.update(
-      @contact.first_name = "andy",
-      @contact.last_name = "g",
-      @contact.email = "andy.heh@",
-      @contact.phone_number = "393902"
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      email: params[:email],
+      phone_number: params[:phone_number]
     )
     render 'show.json.jb'
   end
