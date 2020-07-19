@@ -1,5 +1,8 @@
 class Api::ContactsController < ApplicationController
   def index
+    p "5" * 70
+    p current_user
+
     @contacts = Contact.all
     render 'index.json.jb'
   end
@@ -10,6 +13,9 @@ class Api::ContactsController < ApplicationController
   end
 
   def create
+    
+    p current_user
+    
     @contact = Contact.new(
       first_name: params[:first_name],
       last_name: params[:last_name],
