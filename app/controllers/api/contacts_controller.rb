@@ -1,9 +1,9 @@
 class Api::ContactsController < ApplicationController
   def index
-    p "5" * 70
-    p current_user
-
     @contacts = Contact.all
+    # group = Group.find_by(name: params[:group])
+
+    # @contacts = group.contacts.where(user_id: current_user.id)
     render 'index.json.jb'
   end
 
